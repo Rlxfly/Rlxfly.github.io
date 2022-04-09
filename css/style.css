@@ -48,7 +48,7 @@ html {
 
 body {
   color: #5E5C7F;
-  background-color: #F9F9FF;
+  background-color: rgb(179, 221, 226);
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 1.7;
@@ -374,7 +374,7 @@ pre {
 header.desktop-header-1 {
   color: #FFF;
   border-right: solid 1px rgba(255, 255, 255, 0.1);
-  background: #353353;
+  /* background: #72e9d9; */
   padding: 50px 40px 40px;
   position: fixed;
   left: 0;
@@ -788,7 +788,7 @@ header.mobile-header-2 .site-logo img {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   background-clip: padding-box;
   border: 0;
   border-radius: 0.25rem;
@@ -853,7 +853,8 @@ section {
 }
 
 section.home {
-  background: #353353;
+  /* Jejak */
+  /* background: #353353; */
   padding: 0;
   height: 100vh;
   min-height: 100vh;
