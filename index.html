@@ -288,8 +288,8 @@
 					<div class="fact-item">
 						<span class="icon icon-people"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">20</em></h3>
-							<p class="mb-0">Next Project</p>
+							<h3 class="mb-0 mt-0 number"><em id="followers" class="count">404</em></h3>
+							<p class="mb-0">Followers Github</p>
 						</div>
 					</div>
 					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
@@ -300,8 +300,8 @@
 					<div class="fact-item">
 						<span class="icon icon-badge"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">30</em></h3>
-							<p class="mb-0">Followers github</p>
+							<h3 class="mb-0 mt-0 number"><em id="repo" class="count">0</em></h3>
+							<p class="mb-0">Repository</p>
 						</div>
 					</div>
 				</div>
@@ -594,10 +594,21 @@
 					<div class="thumb mb-3 mx-auto">
 						<img src="https://avatars.githubusercontent.com/u/96007645?v=4" alt="customer-name" />						
 					</div>
-					<h4 class="mt-3 mb-0"><a href="https://github.com/Kachi-chan">Ryan Mitsu</a></h4>
-					<span class="subtitle">Teach me Javascript</span>
+					<h4 class="mt-3 mb-0"><a href="https://github.com/Rainprjkt">Ryan</a></h4>
+					<span id="nama2" class="subtitle">Null</span>
 					<div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-						<p class="mb-0">Sepuh kesayangan gwehj 😅</p>
+						<p id="bio2" class="mb-0">Hayo</p>
+					</div>
+				</div>
+				
+				<div class="testimonial-item text-center mx-auto">
+					<div class="thumb mb-3 mx-auto">
+						<img src="https://avatars.githubusercontent.com/u/87053694?v=4" alt="customer-name" />						
+					</div>
+					<h4 class="mt-3 mb-0"><a href="https://github.com/Rlxfly">Re7</a></h4>
+					<span id="nama0" class="subtitle">Null</span>
+					<div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+						<p id="bio0" class="mb-0">Hayo</p>
 					</div>
 				</div>
 				
@@ -607,9 +618,9 @@
 						<img src="https://avatars.githubusercontent.com/u/79846517?v=4" alt="customer-name" />						
 					</div>
 					<h4 class="mt-3 mb-0"><a href="https://github.com/Lingz-ui">Lingz-ui</a></h4>
-					<span class="subtitle">Teach me HTML & CSS</span>
+					<span id="nama1" class="subtitle">Anu</span>
 					<div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-						<p class="mb-0">Sefuh HTML 😅</p>
+						<p id="bio1" class="mb-0"> 😅</p>
 					</div>
 				</div>
 
@@ -745,5 +756,45 @@
 	
 	}
 </script>
+				<script>
+					fetch('https://api.github.com/users/Rlxfly')
+  .then((response) => response.json())
+  .then((data) => document.getElementById("followers").innerHTML = data.followers);
+				</script>
+				<script>
+					fetch('https://api.github.com/users/Rlxfly')
+  .then((response) => response.json())
+  .then((data) => document.getElementById("repo").innerHTML = data.public_repos);
+				</script>
+				<script>
+					fetch('https://api.github.com/users/Lingz-ui')
+  .then((response) => response.json())
+  .then((data) => document.getElementById("nama1").innerHTML = data.name);
+				</script>
+				<script>
+					fetch('https://api.github.com/users/Lingz-ui')
+  .then((response) => response.json())
+  .then((data) => document.getElementById("bio1").innerHTML = data.bio);
+				</script>
+				<script>
+					fetch('https://api.github.com/users/Rainprjkt')
+  .then((response) => response.json())
+  .then((data) => document.getElementById("nama2").innerHTML = data.name);
+				</script>
+				<script>
+					fetch('https://api.github.com/users/Rainprjkt')
+  .then((response) => response.json())
+  .then((data) => document.getElementById("bio2").innerHTML = data.bio);
+				</script>
+				<script>
+					fetch('https://api.github.com/users/Rlxfly')
+  .then((response) => response.json())
+  .then((data) => document.getElementById("bio0").innerHTML = data.bio);
+				</script>
+				<script>
+					fetch('https://api.github.com/users/Rlxfly')
+  .then((response) => response.json())
+  .then((data) => document.getElementById("nama0").innerHTML = data.name);
+				</script>
 </body>
 </html>
